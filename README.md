@@ -42,11 +42,11 @@ these challenges are a great way to sharpen your skills!
     ```
 
 4. Inside your newly created project folder, update your `Cargo.toml` to include
-the shared tests crate as a dev-dependency.
+the shared tests crate as a dependency.
 
     ```bash
-    [dev-dependencies]
-    tests = { path = "../../../tests" }
+    [dependencies]
+    tests = { path = "../../tests" }
     ```
 
     *(Adjust the relative path as needed)*
