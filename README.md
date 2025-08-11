@@ -42,7 +42,7 @@ these challenges are a great way to sharpen your skills!
     ```
 
 4. Inside your newly created project folder, update your `Cargo.toml` to include
-the shared tests crate as a dependency.
+the shared tests for the month as a dependency.
 
     ```bash
     [dependencies]
@@ -75,16 +75,13 @@ under `src/bin/` if needed).
     }
 
     #[cfg(test)]
-    mod tests {
-        use super::*;
-        use tests::{common_input, assert_correct};
+    use tests::common_input;
 
-        #[test]
-        fn test_do_stuff() {
-            let input = common_input();
-            // Example usage (adjust as needed)
-            assert_eq!(do_stuff(input), 42);
-        }
+    #[test]
+    fn test_do_stuff() {
+        let input = common_input();
+        // Example usage (adjust as needed)
+        assert_eq!(do_stuff(input), 42);
     }
     ```
 
